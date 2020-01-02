@@ -19,8 +19,11 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <Hello name={this.state.name} />
-        <CustomModal/>
+        <div className='main'>
+          <Hello name={this.state.name} />
+          <CustomModal/>
+        </div>
+        <div className='printable'>Some static content</div>
       </div>
     );
   }

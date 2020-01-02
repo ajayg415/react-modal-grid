@@ -8,7 +8,7 @@ const Grid = () =>{
 
   useEffect(()=>{
     axios.get("https://jsonplaceholder.typicode.com/users").then(res => {
-      setData([...res.data, ...res.data, ...res.data])
+      setData([...res.data, ...res.data, ...res.data, ...res.data])
     });
   },[]);
 

@@ -11,8 +11,11 @@ const CustomModal = () =>{
 
   const getPrint = () => {
     const con = document.querySelector('.modal-body').innerHTML;
-    document.getElementById('print').innerHTML = con;
+    document.querySelector('.printable').innerHTML = con;
     window.print();
+    window.onafterprint = function(){ //This won't work if user clicks on cancel on print window.
+      document.querySelector('.printable').innerHTML ='';
+    }
   }
 
   return (
