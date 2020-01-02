@@ -1,3 +1,3 @@
 # react-modal-grid
 
-##Output: [https://kkvilvgqb.github.stackblitz.io](https://kkvilvgqb.github.stackblitz.io)
+In general ```window.print()``` will return only first page if the content is on Modal. Here is a work around to get complete Modal content in print. 
