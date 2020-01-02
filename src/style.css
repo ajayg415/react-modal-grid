@@ -7,9 +7,31 @@ h1, p {
   overflow: auto;
 }
 
+#print{
+  display: none;
+}
+
 @media print{
-  .modal-body{ display: block !important;}
-  #root{
+  body *{
     display: none;
   }
+  #print{
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  /* .modal-body{ 
+    display: block !important;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: auto;
+  }*/
+  .grid-container{
+    width: 100%;
+    overflow: visible;
+    height: inherit;
+  } 
 }

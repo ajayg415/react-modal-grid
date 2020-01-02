@@ -9,6 +9,12 @@ const CustomModal = () =>{
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const getPrint = () => {
+    const con = document.querySelector('.modal-body').innerHTML;
+    document.getElementById('print').innerHTML = con;
+    window.print();
+  }
+
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
@@ -17,7 +23,7 @@ const CustomModal = () =>{
 
       <Modal show={show} onHide={handleClose} size="xl">
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading <span className="small" onClick={()=>window.print()}><a href="#">Print</a></span></Modal.Title>
+          <Modal.Title>Modal heading <span className="small" onClick={getPrint}><a href="#">Print</a></span></Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Grid/>
