@@ -1,0 +1,15 @@
+h1, p {
+  font-family: Lato;
+}
+
+.grid-container{
+  max-height: 300px;
+  overflow: auto;
+}
+
+@media print{
+  .modal-body{ display: block !important;}
+  #root{
+    display: none;
+  }
+}
